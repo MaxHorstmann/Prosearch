@@ -1,11 +1,47 @@
-<html>
-<body>
-	<h1>ProSearch</h1>
-	<form>
-		<input type="text">
-		<input type="submit">
-	</form>
+<!doctype html>
+<html class="no-js" lang="">
 
+<head>
+  <meta charset="utf-8">
+  <title>ProSearch</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="text-center">
+    <div class="jumbotron jumbotron-fluid mt-5">
+      <div class="container">
+        <h1 class="display-4">ProSearch</h1>
+        <p class="lead">Search learning content across Prosus services</p>
+    </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form id="form">
+              <input type="text" autocomplete="off" id="query" name="query" placeholder="javascript" style="width:300px">
+              <button type="submit" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"></path>
+                  <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                </svg>
+              </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col">
+          <table id="table" style="margin:auto">
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
