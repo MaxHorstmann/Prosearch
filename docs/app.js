@@ -3,8 +3,7 @@ const Controller = {
     ev.preventDefault();
     const form = document.getElementById("form");
     const data = Object.fromEntries(new FormData(form));
-    //const url = "https://maxhorstmann-prosearch.azurewebsites.net/api/prosearch?code=fakeZ2RzMPXhtl89lLnHQ4BMOjjffCCea19Y375XaSXCNr5WyWGITQ==";
-    const url = "http://localhost:7071/api/Prosearch?x=x"
+    const url = "https://maxhorstmann-prosearch.azurewebsites.net/api/prosearch?code=fakeZ2RzMPXhtl89lLnHQ4BMOjjffCCea19Y375XaSXCNr5WyWGITQ==";
     const response = fetch(url+`&q=${data.query}`, { mode: 'cors'}).then((response) => {
       response.json().then((results) => {
         Controller.updateTable(results);
