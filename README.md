@@ -1,2 +1,2 @@
 # Prosearch
-Search learning content arcross Prosus companies
+Search learning content across Prosus companies
