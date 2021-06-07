@@ -21,7 +21,7 @@ const Controller = {
 
     for (let result of results) {
       let row = document.createElement('tr');
-      row.innerHTML = `<tr><td><img src="${result.providerImageUrl}" alt="${result.provider}" height="30"></td><td><p><a target="_blank" href="${result.url}">${result.title}</a></p></td></tr>`;
+      row.innerHTML = `<tr><td style="va-middle"><img src="${result.providerImageUrl}" alt="${result.provider}" height="30"></td><td><p><a target="_blank" href="${result.url}">${result.title}</a></p></td></tr>`;
       table.appendChild(row);
     }
   },
