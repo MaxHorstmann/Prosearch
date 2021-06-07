@@ -1,10 +1,9 @@
 const Controller = {
   search: (ev) => {
     ev.preventDefault();
-    const form = document.getElementById("form");
-    const data = Object.fromEntries(new FormData(form));
+    const query = document.getElementById("query").value;
     const url = "https://maxhorstmann-prosearch.azurewebsites.net/api/prosearch?code=fakeZ2RzMPXhtl89lLnHQ4BMOjjffCCea19Y375XaSXCNr5WyWGITQ==";
-    const response = fetch(url+`&q=${data.query}`, { mode: 'cors'}).then((response) => {
+    const response = fetch(url+`&q=${query}`, { mode: 'cors'}).then((response) => {
       response.json().then((results) => {
         Controller.updateTable(results);
       });
